@@ -54,7 +54,7 @@ public class AccountDao {
     public AccountDao(String accessToken, String tokenType, String matrixServerName, long expiresIn, long createdAt, String userId, String token) {
         this.accessToken = accessToken;
         this.tokenType = tokenType;
-        this.matrixServerName = matrixServerName;
+        this.matrixServerName = matrixServerName.contains("matrix.") ? matrixServerName : "matrix." + matrixServerName;
         this.expiresIn = expiresIn;
         this.createdAt = createdAt;
         this.userId = userId;

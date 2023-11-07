@@ -33,7 +33,7 @@ public class OpenIdToken {
     }
 
     public String getMatrixServerName() {
-        return matrixServerName;
+        return matrixServerName.contains("matrix.") ? matrixServerName : "matrix." + matrixServerName;
     }
 
     public void setMatrixServerName(String matrixServerName) {
